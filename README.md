@@ -29,7 +29,7 @@ To run this project locally, you need a web browser. No additional software is r
    git clone (https://github.com/devahmed123/Project1)
 2. Navigate to the project directory:
    
-   cd animated-signup-login
+   cd Project1
   
 3. Open the `index.html` file in your preferred web browser:
 
