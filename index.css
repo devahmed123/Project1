@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    height: 500px;
+    border: 1px solid #0000001f;
+    box-shadow: 0 0 10px #000;
+    display: flex;
+    align-items: start;
+    border-radius: 25px;
+    gap: 30px;
+    overflow: hidden;
+}
+.section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blueviolet;
+    height: 500px;
+    border-radius: 25px 35px 35px 25px;
+    position:relative;
+    gap: 30px;
+    color: #fff;
+}
+
+@keyframes slide{
+    0%{
+        left: 530px;
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes slide2{
+    0%{
+        right: 530px;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+.section form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 35px;
+    width: 95%;
+}
+.section form input{
+    width: 85%;
+    border: none;
+    border-bottom: 1px solid #0000003a;
+    padding-left: 15px;
+    outline: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+.section form input:focus{
+    border-bottom: 1px solid #000;
+}
+.section form input::placeholder{
+    font-weight: 500;
+    color: #000000cb;
+}
+.section form center{
+    margin-left: -100px;
+}
+.section form input[type='submit']{
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: blueviolet;
+    cursor: pointer;
+}
+.section form button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: #3e65cf;
+    cursor: pointer;
+    color: #fff;
+}
+.section form .google{
+    background:  #4285F4;
+}
+.login{
+    display: none;
+}
+.login div{
+    animation: slide 0.3s linear;
+}
+.signup{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.signup div{
+    border-radius: 35px 0 0 35px;
+    animation: slide2 0.3s linear;
+}

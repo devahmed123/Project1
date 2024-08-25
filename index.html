@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Ah -Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login section" id="login">
+            <div class="login-cont" id="login-cont">
+                <h2>Log in into Ah-Webs.</h2>
+                <img src="login.png" alt="login">
+            </div>
+            <form class="login-form" id="login-form">
+                <h2>Login</h2>
+                <input type="text" id="username" name="username" placeholder="Your Username" required>
+                <input type="password" name="password" id="password" placeholder="Your Password" required>
+                <input type="submit" value="Login">
+                <center>
+                    <p>Or</p>
+                <span>
+                    <a href="#"><button class="google"><i class="fa-brands fa-google"></i>Google</button></a>
+                    <a href="#"><button><i class="fa-regular fa-envelope"></i>Gmail</button></a>
+                    <p>New account<a href="#signup" class="signup-link">Signup</a></p>
+                </span>
+            </center>
+            </form>
+        </div>
+        <div class="signup section" id="signup">
+            <div class="signup-cont" id="signup-cont">
+                <h2>Sign up for Ah-Webs.</h2>
+                <img src="signup.png" alt="login">
+            </div>
+            <form class="signup-form" id="signup-form">
+                <h2>Signup</h2>
+                <input type="text" id="username" name="username" placeholder="Your Username" required>
+                <input type="password" name="password" id="password" placeholder="Your Password" required>
+                <input type="password" name="pasword2" id="password2" placeholder="Confirm Password" required>
+                <input type="submit" value="Signup">
+                <center>
+                    <p>Or</p>
+                <span>
+                    <a href="#"><button class="google">Google</button></a>
+                    <a href="#"><button>Gmail</button></a>
+                    <p>Already have an account<a href="#login" id="login-link">Login</a></p>
+                </span>
+            </center>
+            </form>
+        </div>
+    </div>
+    <script>
+        const login = document.getElementById('login');
+        const signup = document.getElementById('signup');
+        const loginLink = document.getElementById('login-link');
+        const signupLink = document.querySelector('.signup-link');
+
+        signupLink.addEventListener('click', () => {
+            login.style.display = 'none';
+            signup.style.display = 'flex';
+        });
+
+        loginLink.addEventListener('click', () => {
+            signup.style.display = 'none';
+            login.style.display = 'flex';
+        });
+    </script>
+</body>
+</html>
